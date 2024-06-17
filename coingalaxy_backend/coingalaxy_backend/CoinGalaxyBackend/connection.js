@@ -42,33 +42,33 @@ app.get('/get-coins',async function(request,response){
    
 })
 
-app.post('/add-coins',async function(request,response){
-    try{
-        await Coins.create({
-            "id":request.body.id,
-            "title": request.body.title,
-            "description":request.body.description,
-            "period":request.body.period,
-            "amount":request.body.amount,
-            "availability":request.body.availability,
-            "rating":request.body.rating,
-            "image":  request.body.image,
-            "category":request.body.category,
-        })
-        response.status(201).json({
-            "status":"success",
-            "message":"entry added"
-        })
-    }
-    catch(error){
-        response.status(500).json({
-            "status":"failure",
-            "message":"entry not added",
-            "eroor":error
-        })
-    }
+// app.post('/add-coins',async function(request,response){
+//     try{
+//         await Coins.create({
+//             "id":request.body.id,
+//             "title": request.body.title,
+//             "description":request.body.description,
+//             "period":request.body.period,
+//             "amount":request.body.amount,
+//             "availability":request.body.availability,
+//             "rating":request.body.rating,
+//             "image":  request.body.image,
+//             "category":request.body.category,
+//         })
+//         response.status(201).json({
+//             "status":"success",
+//             "message":"entry added"
+//         })
+//     }
+//     catch(error){
+//         response.status(500).json({
+//             "status":"failure",
+//             "message":"entry not added",
+//             "eroor":error
+//         })
+//     }
     
-})
+// })
 
 
 //ancientcoins
